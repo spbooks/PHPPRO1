@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<methodCall>
+  <methodName>flickr.groups.pools.getphotos</methodName>
+  <params>
+    <param>
+      <value>
+        <struct>
+          <member>
+            <name>api_key</name>
+            <value>secret-key</value>
+          </member>
+          <member>
+            <name>group_id</name>
+            <value>610963@N20</value>
+          </member>
+          <member>
+            <name>per_page</name>
+            <value>5</value>
+          </member>
+        </struct>
+      </value>
+    </param>
+  </params>
+</methodCall>
+

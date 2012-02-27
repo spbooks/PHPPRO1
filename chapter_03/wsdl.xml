@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions name="SimpleWSDL" targetNamespace="urn:SimpleWSDL" 
+xmlns:typens="urn:SimpleWSDL" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <message name="countWords"><part name="paragraph" 
+type="xsd:anyType"></part></message>
+  <message name="countWordsResponse"></message>
+  <message name="getDisplayName"><part name="first_name" 
+type="xsd:anyType"></part><part name="last_name" 
+type="xsd:anyType"></part></message>
+  <message name="getDisplayNameResponse"></message>
+  <portType name="ServiceFunctionsPortType">
+    <operation name="countWords"><input 
+message="typens:countWords"></input><output 
+message="typens:countWordsResponse"></output></operation>
+    <operation name="getDisplayName"><input 
+message="typens:getDisplayName"></input><output 
+message="typens:getDisplayNameResponse"></output></operation>
+  </portType>
+  <binding name="ServiceFunctionsBinding" 
+type="typens:ServiceFunctionsPortType"><soap:binding style="rpc" 
+transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <operation name="countWords">
+      <soap:operation soapAction="urn:ServiceFunctionsAction"></soap:operation>
+      <input><soap:body namespace="urn:SimpleWSDL" use="encoded" 
+encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body></input>
+      <output><soap:body namespace="urn:SimpleWSDL" use="encoded" 
+encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body></output>
+    </operation>
+    <operation name="getDisplayName">
+      <soap:operation soapAction="urn:ServiceFunctionsAction"></soap:operation>
+      <input><soap:body namespace="urn:SimpleWSDL" use="encoded" 
+encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body></input>
+      <output><soap:body namespace="urn:SimpleWSDL" use="encoded" 
+encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></soap:body></output>
+    </operation>
+  </binding>
+  <service name="SimpleWSDLService">
+    <port name="ServiceFunctionsPort" 
+binding="typens:ServiceFunctionsBinding"><soap:address location="http://localhost/soap-
+server.php"></soap:address></port>
+  </service>
+</definitions>
+

@@ -1,0 +1,4 @@
+$ cat .gitignore
+.DS_Store
+.svn/
+

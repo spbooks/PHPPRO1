@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Url_Shortener</name>
+ <channel>pear.local</channel>
+ <summary>Shorten URLs with a variety of services.</summary>
+ <description>Url_Shortener will let you shorten URLs with Bit.ly, is.gd or Tinyurl</description>
+ <lead>
+  <name>Davey Shafik</name>
+  <user>dshafik</user>
+  <email>me@daveyshafik.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-07-31</date>
+ <time>23:13:22</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</license>
+ <notes>
+Repackaged for release on the pear.local channel.
+ </notes>
+ <contents>
+  <dir baseinstalldir="Url" name="/">
+   <file baseinstalldir="Url" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="Shortener/Bitly.php" role="php" />
+   <file baseinstalldir="Url" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="Shortener/Interface.php" role="php" />
+   <file baseinstalldir="Url" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="Shortener/Isgd.php" role="php" />
+   <file baseinstalldir="Url" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="Shortener/Tinyurl.php" role="php" />
+   <file baseinstalldir="Url" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="Shortener.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.6</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>pecl_http</name>
+    <channel>pecl.php.net</channel>
+    <min>1.7.0</min>
+    <recommended>1.7.1</recommended>
+    <providesextension>pecl_http</providesextension>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2011-07-31</date>
+   <license uri="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</license>
+   <notes>
+This is the first release of the Url_Shortener package
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2011-07-31</date>
+   <license uri="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</license>
+   <notes>
+Repackaged for release on the pear.local channel.
+   </notes>
+  </release>
+ </changelog>
+</package>
