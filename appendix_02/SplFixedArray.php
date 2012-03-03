@@ -27,7 +27,6 @@ for ($j = 1; $j < 10000000; $j = $j) {
     $fixedArray[$i] = new stdClass();
   }
 
-  $start = microtime(true);
   for($i = 0; $i < $size; $i++) {
     // do nothing
     $value = $fixedArray[$i];
